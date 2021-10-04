@@ -1,0 +1,14 @@
+body {
+    resize: none;
+}
+
+table {
+ table-layout: fixed;   
+ height: 700px;
+ width: 800px;
+}
+
+table td:hover {
+    background-color: rgb(48, 123, 184);
+}
+
