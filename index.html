@@ -12,13 +12,13 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="index.js"></script>
     <header class="container text-center">
-            <div class="col-sm display-2">Tic Tac Toe</div>
-            <br><br>
-            <span class="col-sm display-5">Turn: <span id="player"><script>$(window).on('load', function() {player.innerHTML = `${playerValue} ${playerValueJS}`} )</script></span></span>
+            <div class="col-sm display-3">Tic Tac Toe</div>
+            <div class="alert alert-success" id="winner" style="display: none;">Latest Winner: &nbsp;&nbsp; <span id="winner-name" class="display-6">&nbsp;</span></div>
+            <span class="col-sm display-4">Turn: <span id="player"><script>$(window).on('load', function() {player.innerHTML = `${playerValue} ${playerValueJS}`} )</script></span></span>
                 
             
     </header>
-    <br><br>
+    <br>
     <main class="container">
             <table class="table table-bordered text-center display-5 align-middle">
                 <tr>
@@ -38,7 +38,11 @@
                 </tr>
             </table>
     </main>
-    <br><br><br>
+    <br>
+    <footer class="container text-center">
+        <button class = "btn btn-primary btn-lg text-center " onclick="resetGame()">Reset Game</button>
+    </footer>
+    
 
     
     
