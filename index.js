@@ -14,6 +14,7 @@ var validArrays = [
     [2,4,6],
    
 ] 
+var winner = ""
 
 $(document).ready(function() {
     $('td').on("click", function() {
@@ -65,7 +66,8 @@ function checkWinner() {
         }
     validateArrays(positionalArray, "2")
     if (amountFilled === 9){
-        alert("Stalemate!");
+        winner = "Stalemate!"
+        $('#winner').fadeIn('slow')
         resetGame();
     }
     }
@@ -78,7 +80,8 @@ function validateArrays(positionalArray, pNum) {
         for (i=0; i <= validArrays.length - 1; i++){
             let check = (array, targetArray) => targetArray.every(a => array.includes(a));
             if (check(positionalArray, validArrays[i])){
-                alert(`Player ${pNum} wins!`)
+                document.getElementById('winner-name').innerHTML = `Player ${pNum}`
+                $('#winner').fadeIn('slow')
                 resetGame()
             }
         }
